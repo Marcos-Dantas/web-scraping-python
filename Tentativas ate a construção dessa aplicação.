@@ -1,0 +1,26 @@
+1. Tentativa, fazer uma API, pegando como base a API do similarweb: https://developers.similarweb.com/docs/set-up-your-batch-api Fiz a conta na plataforma, 
+e na hora de gerar a api key, estou tendo dificuldade, pois não e liberado essa opção pra minha conta de teste. Mesmo criando varias contas de varias formas, 
+a opção de gerar uma API key não fica disponivel.
+
+2. Tentativa, e possivel usar uma API gratis do similarweb, o Digital Rank. Mais as informações que são retornadas, não possuem todas as informações que eu necessito.
+
+3. Tentativa, fazer web scraping direto da pagina do similarweb também não esta sendo possivel, pois qualquer tentiva utilizando o BeautifulSoup, retorna uma pagina de 
+validação de captcha que impede scraping de dados.
+
+4. Tentativa, deu certo fazer o scraping direto da pagina do similarweb, encontrei esse link: https://understandingdata.com/posts/how-to-avoid-being-blocked-web-scraping/
+que mostra melhores praticas pra evitar que a requisição retorne a pagina de bloqueio, estou utilizando o cache do google, antes da requisição.
+
+5. Apareceu um outro problema, agora o site voltou a bloquear minhas requisições por conta de varias chamadas seguidas. Mesmo fazendo um teste, adicionado um timer de valores
+randomicos entre 30 e 60 em cada requisição, o bloqueio de varias requisições aparece depois da 43 requisição.
+
+6. Tentativa, estou usando um quebrador de verificação captcha, o Web Unbloqued, na sua versão trial, para poder rodar o script de coleta de dados é esta funcionando, mas e uma 
+ferramenta que pode não funcionar depois do trial acabar.
+
+7. Tentativa, tentei novamente encontrar um quebrador de captcha gratis, para burlar o bloqueio de scraping da pagina, ou buscar outra forma de passar 
+dessa pagina, mais não encontrei uma solução.
+
+8. Tentativa, construi um script com scrapy framework. Utilizando essa alternativa, acabava batendo num erro 403, depois de resolvido esse erro, com um serviço de Proxy 
+o ScrapeOps Proxy, a requisição acabava batendo no bloqueio de scraping novamente. Utilizando o ScrapeOps Proxy no script com BeautifulSoup não funcionava.
+
+9. Tentativa, fiz todo o processo de web scraping utilizando o quebrador de captchas, construi uma API com flask framework e MongoDB, mas percebi que não conseguiria deixar a API
+assincrona, nesse caso fiz outra API com FastAPI que possui suporte pra isso.
