@@ -2,6 +2,15 @@
 API para scraping de dados do SimilarWeb e armazená-los em um banco de dados MongoDB
 
 ## Como rodar o projeto?
+#### E necessario ter o mangodb instalado, faça a instalação dele e modifique as linhas de configuração de conexão no projeto, no arquivo api_fast.py
+para as configurações do seu banco de dados.
+
+#### Configurações para conexão com o MongoDB
+client = MongoClient('localhost', 27017) 
+
+db = client['MyDatabaseSimularWeb']  
+
+colecao = db['SimularWebInfo']
 
 ### Criar e Ativar o Ambiente Virtual (venv)
 No Windows:
