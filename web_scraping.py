@@ -172,7 +172,7 @@ async def make_scraping(domain_name):
 
     # Faz a requisição assíncrona usando a função make_async_request()
     async with aiohttp.ClientSession() as session:
-        async with session.get(url, headers=headers, ssl=False, proxy='http://Marcos:4S7TwLXXAlw8qb@unblock.oxylabs.io:60000') as response:
+        async with session.get(url, headers=headers, ssl=False, proxy='http://UserTestAplication:4S7TwLXXAlw8qb@unblock.oxylabs.io:60000') as response:
 
             if response.status  == 200:
                 response_text = await response.text()
